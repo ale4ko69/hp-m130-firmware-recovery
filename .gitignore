@@ -1,0 +1,14 @@
+# HP firmware updater is downloaded from HP at runtime.
+M129_Series_FW_Update-*.exe
+
+# Local working folder created by the recovery script.
+hp-firmware-work/
+
+# Local investigation artifacts.
+*.tmp
+desktop_screenshot*.png
+virtual_desktop*.png
+driverDetails_*.json
+firmware_links.json
+softwareTypes_dump.json
+README-hp-m130-firmware-recovery.md
