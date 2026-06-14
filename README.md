@@ -42,7 +42,7 @@ In other words: you may not need USB at all.
    HP M130fn RAW 192.168.1.210
    ```
 
-5. Downloads the official HP firmware updater:
+5. Downloads the official HP firmware updater used by this recovery flow:
 
    ```text
    M129_Series_FW_Update-20220414.exe
@@ -87,7 +87,13 @@ no suitable printer driver.
 
 Do not commit HP's firmware updater executable to this repository.
 
-The script downloads it from HP at runtime and verifies both:
+This recovery flow intentionally uses one fixed HP updater file:
+
+```text
+M129_Series_FW_Update-20220414.exe
+```
+
+The script downloads that exact file from HP at runtime and verifies both:
 
 - SHA256 hash
 - Authenticode signature from `HP Inc.`

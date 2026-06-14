@@ -15,7 +15,7 @@
   It:
     1. Checks the printer web UI and RAW print port.
     2. Creates a Windows RAW TCP/IP printer queue on port 9100.
-    3. Downloads the official HP firmware updater from HP support APIs.
+    3. Downloads the fixed official HP firmware updater used by this recovery flow.
     4. Verifies the updater is signed by HP Inc.
     5. Launches the HP firmware updater so you can choose the RAW queue and click
        "Send Firmware".
@@ -42,6 +42,8 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+# This recovery flow intentionally uses this exact HP updater version.
+# Do not replace it with "latest" unless you also update the expected hash and test the flow.
 $FirmwareFileName = 'M129_Series_FW_Update-20220414.exe'
 $FirmwareUrl = 'https://ftp.hp.com/pub/softlib/software13/FW_CPE_Consumer/LJ_M130/M129_Series_FW_Update-20220414.exe'
 $ExpectedSha256 = '4C23D02906060443DF49415360F7E4C9117C739899721182EE4939CF22D47ACD'
